@@ -24,7 +24,7 @@ def dbg_show(*_: ..., **__: ...):
 def save(fig: figure.Figure, fspath: os.PathLike, 
                              filename: str, e: filesys.extension):
 
-    ''' Writes to disc the generated plot. '''
+    ''' Writes to disk the generated plot. '''
     
     fspath = os.path.join(fspath, filename + e.value)
     fig.savefig(fspath)

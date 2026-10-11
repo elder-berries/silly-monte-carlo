@@ -13,7 +13,7 @@ from smc import (abm, filesys, plots)
 sim = abm.ArithmeticBrownianMotion(spot = 0.0, mu = 0.05, sigma = 0.2,
                                    timesteps = 128, paths = 256)
 
-fig, _ = plots.simulation_summrary(sim, 0.0, 1.0)
+fig, _ = plots.simulation_summary(sim, 0.0, 1.0)
 plots.save(fig, 'plots', 'abm', filesys.extension.pdf)
 ```
 
@@ -62,7 +62,7 @@ class Simulator(abc.ABC):
 
     def mean(self, s: float, t: float) -> numpy.ndarray:
 
-        # `mean` computes the theoretical expection over
+        # `mean` computes the theoretical expectation over
         # the simulation interval in [s, t].
 
         (...) 
