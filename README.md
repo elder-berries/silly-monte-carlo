@@ -23,7 +23,7 @@ As prerequisites, you will need git, and a suitable python version (`>=3.11`).
 
 ```bash
 # checkout repository.
-git clone git@github.com:jjaemun/silly-monte-carlo.git
+git clone git@github.com:elder-berries/silly-monte-carlo.git
 # go to library root.
 cd silly-monte-carlo
 # create and activate a python environment.
