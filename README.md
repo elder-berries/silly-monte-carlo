@@ -88,10 +88,30 @@ and a number of `timesteps`, it provides the grid values and the corresponding
 increment.
 
 ```python
-grid = TimeGrid(0.0, 1.0, 256)
 
-grid.increment
-grid.values
+@dataclass(frozen=True)
+class TimeGrid:
+
+    ''' Uniform time grid over an interval. '''
+
+    s: float 
+#   ^ start time
+    t: float
+#   ^ end time
+    timesteps: int
+#   ^^^^^^^^^ number of timesteps.
+
+    @property
+    def increment(self):
+
+        # returns discrete time increment.
+        # (...)
+
+    @property
+    def values(self):
+
+        # returns discrete time grid.
+        # (...)
 ```
 
 ### Sample
