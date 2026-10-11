@@ -119,12 +119,26 @@ class TimeGrid:
 `Sample` is the simulation result type.
 
 ```python
-sample = sim.simulate(0.0, 1.0, seed=0)
 
-sample.grid
-sample.sims
-sample.mean
-sample.variance
+@dataclass(frozen = True)
+class Sample(object):
+
+    ''' Result type for a monte carlo simulation. '''
+    
+    grid: TimeGrid
+#   ^^^^ time grid.
+    sims: numpy.ndarray
+#   ^^^^ realized paths.
+
+    @property
+    def mean(self):
+
+        # computes  sample mean.
+
+    @property
+    def variance(self):
+
+        # computes sample variance.
 ```
 
 It stores realized paths along with the `TimeGrid` on which they are
