@@ -2,7 +2,20 @@
 
 ## Overview
 
-`silly-monte-carlo` is a trivial exercise in `monte-carlo` simulation.
+`silly-monte-carlo` is a small exercise in `monte-carlo` simulation.
+
+### Quickstart...
+
+```python
+
+from smc import (abm, filesys, plots)
+
+sim = abm.ArithmeticBrownianMotion(spot = 0.0, mu = 0.05, sigma = 0.2,
+                                   timesteps = 128, paths = 256)
+
+fig, _ = plots.simulation_summrary(sim, 0.0, 1.0)
+plots.save(fig, 'plots', 'abm', filesys.extension.pdf)
+```
 
 ## Installation
 
@@ -73,6 +86,8 @@ In all methods above `s` and `t` are the simulation interval boundaries.
 And so logically they should be (and we check that they are) ordered 
 such that `s` < `t`. Methods dealing with time boundaries can raise exceptions.
 
+#### Seeding
+
 An intentional design choice was introducing optional seeding in the `simulation` method. 
 There are two reasons for this:
 
@@ -80,6 +95,8 @@ There are two reasons for this:
 
     * it signals that we are dealing with rngs upon 
       calling this function but without taking ownership of the generators themselves.
+
+
 
 ### TimeGrid
 
