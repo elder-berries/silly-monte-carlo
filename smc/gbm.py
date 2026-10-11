@@ -28,7 +28,7 @@ class GeometricBrownianMotion(simulator.Simulator):
         self.paths = paths
 
 
-   def simulate(self, s: float, t: float, 
+    def simulate(self, s: float, t: float,
                        seed: seeding.Seed = None) -> sample.Sample:
 
         '''  Computes synthetic paths over simulation 
@@ -85,4 +85,4 @@ class GeometricBrownianMotion(simulator.Simulator):
         mini = numpy.minimum.outer(grid.values - s, grid.values - s)
 
         return (numpy.outer(mean, mean) *
-                    numpy.exp(self.sigma * self.sigma * mini) - 1)
+                    (numpy.exp(self.sigma * self.sigma * mini) - 1))

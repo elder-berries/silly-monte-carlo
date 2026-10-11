@@ -7,7 +7,7 @@ from typing import Dict, Any
 
 PLOT_CFG: Dict[str, Any] = {
 
-    # Bse plot cfg.
+    # Base plot cfg.
         
     # always grid
     'axes.grid': True,

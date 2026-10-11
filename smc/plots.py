@@ -15,9 +15,9 @@ from typing import Optional
 pyplot.rcParams.update(cfg.PLOT_CFG)
 
 
-def show(fig: figure.Figure, *axs: ...):
+def dbg_show(*_: ..., **__: ...):
     
-    ''' Shows recorded plots. '''
+    ''' Shows recorded plots, ignore. '''
     
     pyplot.show()
 
