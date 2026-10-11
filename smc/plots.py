@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-from . import (filesys, sample, simulator, cfg)
+from . import (filesys, sample, seeding, simulator, cfg)
 
 
 import os
@@ -30,11 +30,12 @@ def save(fig: figure.Figure, fspath: os.PathLike,
     fig.savefig(fspath)
 
 
-def simulation_summary(sim: simulator.Simulator, s: float, t: float):
+def simulation_summary(sim: simulator.Simulator, s: float, 
+                       t: float, seed: Optional[seeding.Seed] = None):
 
     ''' Plot paths againts theoretic moments. '''
 
-    sampled = sim.simulate(s, t)
+    sampled = sim.simulate(s, t, seed)
 
     (fig, axs) = pyplot.subplots(3, 1, sharex = True)
     (sax, eax, vax) = axs
