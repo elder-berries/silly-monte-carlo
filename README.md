@@ -78,8 +78,8 @@ There are two reasons for this:
 
     * allows reproducibility if we do decide to seed the `rng`; and,
 
-    * it signals that we are dealing with random number generation upon 
-      calling this function without taking ownership of the generators.
+    * it signals that we are dealing with rngs upon 
+      calling this function but without taking ownership of the generators themselves.
 
 ### TimeGrid
 
@@ -116,18 +116,7 @@ but never own or know anything about the results they produce.
 
 The current model set is deliberately small.
 
-| Model | Status | Notes |
-| --- | --- | --- |
-| Arithmetic Brownian Motion | implemented | used as the first validation target |
-| Geometric Brownian Motion | planned | natural next model |
-
-## Examples
-
-After installation, examples can be run from the repository root.
-
-```bash
-python examples/abm.py
-```
-
-The example builds an arithmetic Brownian motion simulator and displays a
-summary plot comparing simulated paths against theoretical mean and variance.
+| Model |
+| --- |
+| Arithmetic Brownian Motion |
+| Geometric Brownian Motion |
