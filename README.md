@@ -23,14 +23,14 @@ As prerequisites, you will need git, and a suitable python version (`>=3.11`).
 
 ```bash
 # checkout repository.
-git clone git@github.com:elder-berries/silly-monte-carlo.git
+$ git clone git@github.com:elder-berries/silly-monte-carlo.git
 # go to library root.
-cd silly-monte-carlo
+$ cd silly-monte-carlo
 # create and activate a python environment.
-python -m venv .env
-source .env/bin/activate
+$ python -m venv .env
+$ source .env/bin/activate
 # build an editable install.
-pip install -e .
+$ pip install -e .
 ```
 
 The package is set up to dynamically install dependencies through the 
