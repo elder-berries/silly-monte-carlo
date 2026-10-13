@@ -14,3 +14,13 @@ class extension(enum.Enum):
 
     pdf = '.pdf'
     png = '.png'
+
+
+def resolve(path: Union[str, os.PathLike]):
+
+    ''' Resolves directory tree, so that every
+            level in path exists and is well defined. '''
+
+    directory = os.dirname(path)
+    if directory:
+        os.makedirs(directory, exist_ok = True)
