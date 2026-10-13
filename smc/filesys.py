@@ -19,7 +19,7 @@ class extension(enum.Enum):
 def resolve(path: Union[str, os.PathLike]):
 
     ''' Resolves directory tree, so that every
-            level in path exists and is well defined. '''
+            level in `path` exists and is well defined. '''
 
     directory = os.dirname(path)
     if directory:
